@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import "./MovieItem.css";
 
-const MovieItem = ({ movie, selectedMovies, performAction, action, buttonColor }) => {
+const MovieItem = ({ movie, selectedMovies, performAction, action, color }) => {
   const [status, setStatus] = useState("");
 
   const onClick = (selectedMovies, movie) => {
@@ -16,8 +16,10 @@ const MovieItem = ({ movie, selectedMovies, performAction, action, buttonColor }
         <div className="header">{movie.Title}</div>
         <div className="description">{movie.Year}</div>
         <button 
-          onClick={() => onClick(selectedMovies, movie)}
-          className={`ui ${buttonColor} button right floated ${status}`} >{action}
+                onClick={() => onClick(selectedMovies, movie)}
+                className={`ui ${color} button right floated ${status}`}
+        >    
+          {action}
         </button>
       </div>
     </div>

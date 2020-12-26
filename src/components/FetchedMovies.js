@@ -18,7 +18,7 @@ const MovieList = ({ movies, selectedMovies, setSelectedMovies, error }) => {
       key={movie.imdbID}
       movie={movie}
       action={"Nominate"}
-      buttonColor={"olive"}
+      color={"olive"}
     />
   ));
   return <div className="ui relaxed divided list">{renderedList}</div>;
